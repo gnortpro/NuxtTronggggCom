@@ -1,5 +1,4 @@
 import webpack from 'webpack'
-import pkg from './package'
 export default {
   mode: 'universal',
   /*
@@ -16,7 +15,14 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+      }
+    ]
   },
   server: {
     port: 8001 // default: 3000
@@ -52,23 +58,6 @@ export default {
         jQuery: 'jquery',
         'window.jQuery': 'jquery'
       })
-    ],
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-          options: {
-            fix: true
-          }
-        })
-      }
-    }
+    ]
   }
 }
