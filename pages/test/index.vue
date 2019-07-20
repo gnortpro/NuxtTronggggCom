@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Hello Test</h1>
 
-    <button v-if="audioPlaying" @click="play()" class="btn">
+    <button v-if="audioPlaying" @click="play('audio')" class="btn">
       <i class="fa fa-play"></i>
     </button>
 
@@ -70,15 +70,15 @@ export default {
     }
   },
   methods: {
-    play() {
-      // const self = this
-      // window.jQuery(document).ready(function() {
-      //   const audio = window.jQuery(this).find(id)
-      //   audio.trigger('play')
-      //   self.audioPlaying = false
-      // })
-      this.audio.play()
-      this.audioPlaying = false
+    play(id) {
+      const self = this
+      window.jQuery(document).ready(function() {
+        const audio = window.jQuery(this).find(id)
+        audio.trigger('play')
+        self.audioPlaying = false
+      })
+      // this.audio.play()
+      // this.audioPlaying = false
     },
     pause() {
       // const self = this

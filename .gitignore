@@ -80,7 +80,7 @@ dist
 # IDE / Editor
 .idea
 .editorconfig
-
+package-lock.json
 # Service worker
 sw.*
 
