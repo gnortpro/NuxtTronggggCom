@@ -61,7 +61,7 @@ export default {
       audioPlaying: true,
       totalDuration: 0,
       s:
-        'http://download1638.mediafire.com/v2t4ic63jpmg/2p8rc3l1yyq20x8/Bubba%5C%27s+Food+Audio.mp3'
+        'http://download1638.mediafire.com/06o78if55uig/2p8rc3l1yyq20x8/Bubba%5C%27s+Food+Audio.mp3'
     }
   },
   computed: {
