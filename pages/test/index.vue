@@ -39,7 +39,7 @@
         @change="changeVolume()"
       />
     </div>
-    <audio :src="s" preload="auto" style="display:none" id="audio"></audio>
+    <audio :src="s" preload="none" style="display:none" id="audio"></audio>
   </div>
 </template>
 
