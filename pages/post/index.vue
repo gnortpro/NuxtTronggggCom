@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <ul>
-      <li v-for="post in posts" :key="post.id">{{post.title}}</li>
+      <li v-for="post in posts" :key="post.id">
+        <nuxt-link :to="post.post_slug">{{post.title}}</nuxt-link>
+      </li>
     </ul>
   </div>
 </template>
