@@ -2,7 +2,7 @@
   <div class="container">
     <ul>
       <li v-for="post in posts" :key="post.id">
-        <nuxt-link :to="post.post_slug">{{post.title}}</nuxt-link>
+        <nuxt-link :to="'/post/'+post.post_slug">{{post.title}}</nuxt-link>
       </li>
     </ul>
   </div>
