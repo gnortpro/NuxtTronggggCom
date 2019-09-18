@@ -1,8 +1,7 @@
 <template>
   <div class="container">
-    {{posts}}
     <ul>
-      <li v-for="post in posts" :key="post.id">{{post.title}}</li>
+      <li>{{post.title}}</li>
     </ul>
   </div>
 </template>
@@ -22,7 +21,7 @@ export default {
         // store.commit('setCurrentLesson', res.data.data.topic.lesson_slug)
         // store.commit('setAvaiable', res.data.data.avaiable_menu_order)
         return {
-          posts: res.data.data.post
+          post: res.data.data.post
         }
       })
       .catch(e => {
