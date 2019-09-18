@@ -44,8 +44,17 @@ export default {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+    baseURL: 'https://api.trongggg.com/api',
+    // baseURL: 'https://dev.auth.x3english.com/api',
+    proxyHeaders: false,
+    credentials: false
+  },
   /*
    ** Build configuration
    */
